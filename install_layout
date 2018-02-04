@@ -1,0 +1,5 @@
+#!/bin/bash
+
+sudo cp ./typematrix /usr/share/X11/xkb/symbols/typematrix
+sudo cp ./evdev /usr/share/X11/xkb/rules/evdev.xml
+setxkbmap -layout typematrix

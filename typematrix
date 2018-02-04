@@ -1,0 +1,147 @@
+default partial alphanumeric_keys modifier_keys
+xkb_symbols "basic" {
+
+    name[Group1] = "English (US, typematrix)" ;
+
+    // This default halfqwerty layout can be used as a base for your
+    // one-hand typing needs. It defines a mirrored qwerty layout on
+    // the third shift level for almost all keys.
+    //
+    // Due to the limited available space on just half of a keyboard,
+    // the following keys have no mirrored mapping:
+    //
+    // - leftbracket, rightbracket, backslash
+    // - arrow keys (who needs those?)
+    // - home, end, page up/down
+    // - delete
+    //
+    // In order to make the halfqwerty layout available to the X
+    // Keyboard Extension, copy halfqwerty.xkb to the symbols folder
+    // of XKB, usually done like this:
+    //
+    //    $ sudo cp halfqwerty.xkb /usr/share/X11/xkb/symbols/halfqwerty
+    //    (note: drop the .xkb file extension)
+    //
+    // You can now try the layout with 'setxkbmap -layout halfqwerty'.
+    //
+    // In order to make the halfqwerty layout available to the
+    // keyboard configuration of your desktop environment, modify the
+    // XKB rules of your system:
+    //
+    //    - open /usr/share/X11/xkb/rules/evdev.xml in your favourite text editor
+    //    - find the <layoutList> element
+    //    - add the halfqwerty layout:
+    //
+    //         <layout>
+    //           <configItem>
+    //             <name>halfqwerty</name>
+    //             <description>English (US, halfqwerty)</description>
+    //             <languageList>
+    //               <iso639Id>eng</iso639Id>
+    //             </languageList>
+    //           </configItem>
+    //           <variantList>
+    //             <variant>
+    //               <configItem>
+    //                 <name>caps</name>
+    //                 <description>English (US, halfqwerty using caps modifier)</description>
+    //               </configItem>
+    //             </variant>
+    //             <variant>
+    //               <configItem>
+    //                 <name>space</name>
+    //                 <description>English (US, halfqwerty assuming space modifier)</description>
+    //               </configItem>
+    //             </variant>
+    //           </variantList>
+    //         </layout>
+    //
+    // You have three options to actually start one-handed typing:
+    //
+    // 1. Use this basic layout and map your own preferred key (or
+    //    pedal, of course) to ISO_Level3_Shift.
+    //
+    // 2. Use the halfqwerty(caps) variant and start one-handed typing
+    //    right away, similar to Randall Munroes 'mirrorboard':
+    //
+    //    See https://blog.xkcd.com/2007/08/14/mirrorboard-a-one-handed-keyboard-layout-for-the-lazy/
+    //
+    //    Note that our halfqwerty layout differs slightly from the
+    //    one explained in the XKCD blog post. See inline
+    //    documentation below.
+    //
+    // 3. Use the halfqwerty(space) variant which allows using the
+    //    space bar to switch to the mirrored layout. This variant
+    //    requires additional configuration, see inline documentation
+    //    below.
+    include "us"
+
+    key <LALT> { [ Super_L, Super_L, Super_L, Super_L ] };
+    key <LWIN> { [ Hyper_L, Hyper_L, Hyper_L, Hyper_L ] };
+    key <RCTL> { [ Alt_L, Alt_L, Alt_L, Alt_L ] };
+    key <RWIN> { [ Alt_L, Alt_L, Alt_L, Alt_L ] };
+
+    // makes the right alt be compose key
+    key <RALT> { [ Multi_key, Multi_key, Multi_key, Multi_key ] };
+
+    // makes the caps lock be backspace
+    key <CAPS> { [ BackSpace, BackSpace, BackSpace, BackSpace ] };
+
+	key <LWIN> {
+	  type[Group1]="ONE_LEVEL",
+	  symbols[Group1] = [ ISO_Level3_Shift ]
+	};
+
+	key <LALT> {
+	  type[Group1]="ONE_LEVEL",
+	  symbols[Group1] = [ ISO_Level5_Shift ]
+	};
+
+    include "level3(modifier_mapping)"
+    include "level5(modifier_mapping)"
+
+    key.type = "EIGHT_LEVEL";
+
+    key <AC01> { [            a,           A,          Left,           Left, Left, Left, Left, Left ] } ;
+    key <AC03> { [            d,           D,          Down,           Down, End, End, End, End ] } ;
+    key <AC04> { [            f,           F,          Right,          Right, Up, Up, Up, Up ] } ;
+    key <AC02> { [            s,           S,          Up,             Up, Down, Down, Down, Down ] } ;
+
+    key <AD02> { [            w,           W,          Home,           Home, Home, Home, Home, Home ] } ;
+    key <AC05> { [            g,           G,          End,            End, End, End, End, End ] } ;
+
+    key <AD04> { [            r,           R,          Up,           Up, Up, Up, Up ] } ;
+    key <AD05> { [            t,           T,          Right,           Right, Right, Right, Right, Right ] } ;
+
+    key <AC07> { [            j,           J,          KP_4,           KP_4, KP_4, KP_4, KP_4, KP_4 ] } ;
+    key <AD08> { [            i,           I,          KP_8,           KP_8, KP_6, KP_6, KP_6, KP_6 ] } ;
+
+    key <AB06> { [            n,           N,          KP_4,           KP_4, KP_4, KP_4, KP_4, KP_4 ] } ;
+
+    key <AD07> { [            u,           U,          KP_7,           KP_7, KP_8, KP_8, KP_8, KP_8 ] } ;
+
+    key <AB08> { [        comma,        less,          KP_2,           KP_2, KP_2, KP_2, KP_2, KP_2 ] } ;
+
+    key <AB07> { [            m,           M,          KP_1,           KP_1, KP_1, KP_1, KP_1, KP_1 ] } ;
+
+    key <AB09> { [       period,     greater,          KP_3,           KP_3, KP_3, KP_3, KP_3, KP_3 ] } ;
+
+    key <AC09> { [            l,           L,          KP_6,           KP_6, KP_7, KP_7, KP_7, KP_7 ] } ;
+
+    key <AD06> { [            y,           Y,          KP_9,           KP_9, KP_9, KP_9, KP_9, KP_9 ] } ;
+
+    key <AC08> { [            k,           K,          Pointer_Button1,           Pointer_Button1, Pointer_Button1, Pointer_Button1, Pointer_Button1, Pointer_Button1 ] } ;
+
+    key <AD03> { [            e,           E,          Up,           Up,          Pointer_Button1, Pointer_Button1, Pointer_Button1, Pointer_Button1 ] } ;
+ 
+    key <AD09> { [            o,           O,          KP_9,           KP_9,      Pointer_Button3, Pointer_Button3, Pointer_Button3, Pointer_Button3 ] } ;
+
+    key <AC10> { [    semicolon,       colon,          Pointer_Button3,           Pointer_Button3, Pointer_Button3, Pointer_Button3, Pointer_Button3, Pointer_Button3 ] } ;
+
+    key <AC06> { [            h,           H,          Pointer_Button2,           Pointer_Button2, Pointer_Button2, Pointer_Button2, Pointer_Button2, Pointer_Button2 ] } ;
+
+    // key <LALT> { [ Super_L, Super_L, Super_L, Super_L, Super_L, Super_L, Super_L, Super_L ] };
+
+    // key <LWIN> { [ Hyper_L, Hyper_L, Hyper_L, Hyper_L, Hyper_L, Hyper_L, Hyper_L, Hyper_L ] };
+
+};
