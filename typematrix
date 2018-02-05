@@ -76,26 +76,28 @@ xkb_symbols "basic" {
     //    below.
     include "us"
 
-    key <LALT> { [ Super_L, Super_L, Super_L, Super_L ] };
-    key <LWIN> { [ Hyper_L, Hyper_L, Hyper_L, Hyper_L ] };
+    key <LALT> { [ ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Shift ] };
+    key <LWIN> { [ ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Shift ] };
     key <RCTL> { [ Alt_L, Alt_L, Alt_L, Alt_L ] };
     key <RWIN> { [ Alt_L, Alt_L, Alt_L, Alt_L ] };
 
-    // makes the right alt be compose key
-    key <RALT> { [ Multi_key, Multi_key, Multi_key, Multi_key ] };
+    key <RALT> { [ ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Shift ] };
 
     // makes the caps lock be backspace
     key <CAPS> { [ BackSpace, BackSpace, BackSpace, BackSpace ] };
 
-	key <LWIN> {
-	  type[Group1]="ONE_LEVEL",
-	  symbols[Group1] = [ ISO_Level3_Shift ]
-	};
+    // makes the delete (above backspace on typematrix, fn+backspace on macs) be compose, unless shift is held
+    key <DELE> { [ Multi_key, Delete, Multi_key, Multi_key ] };
 
-	key <LALT> {
-	  type[Group1]="ONE_LEVEL",
-	  symbols[Group1] = [ ISO_Level5_Shift ]
-	};
+	//key <LWIN> {
+	//  type[Group1]="ONE_LEVEL",
+	//  symbols[Group1] = [ ISO_Level3_Shift ]
+	//};
+
+	//key <LALT> {
+	//  type[Group1]="ONE_LEVEL",
+	//  symbols[Group1] = [ ISO_Level5_Shift ]
+	//};
 
     include "level3(modifier_mapping)"
     include "level5(modifier_mapping)"

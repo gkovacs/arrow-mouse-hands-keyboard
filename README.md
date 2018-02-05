@@ -12,13 +12,13 @@ You will have to check the mouse keys option under keyboard/accessibility settin
 
 If on a qwerty keyboard, when left win/command is held left hand becomes arrow keys and right hand becomes mouse
 
-If on a colemak keyboard, when left alt is held left hand becomes arrow keys and right hand becomes mouse
+If on a colemak keyboard, when alt (either left or right) is held left hand becomes arrow keys and right hand becomes mouse
 
 Described in terms of a qwerty layout, `asdf` are the arrow keys, `wg` are home/end, `jil,uom.` are the mouse direction buttons, `k` is left click, `h` is middle click, `;` is right click
 
 To hit alt, use right control or right win/command instead
 
-Right alt becomes the compose key
+Delete (above backspace on typematrix, fn+backspace on macs) becomes the compose key. Use Shift-Delete to input Delete
 
 Caps lock becomes backspace
 
@@ -26,7 +26,7 @@ If you would like to modify the mappings just edit the file `typematrix`
 
 ## Installing
 
-Note this will overwrite `evdev.xml` so you may want to edit that file manually to add the `typematrix` layout. You will need root priviledges to run this command, if you don't have root priviledges I believe `xkbcomp` will work (a pull request documenting this would be appreciated)
+Note this will overwrite `/usr/share/X11/xkb/rules/evdev.xml` so you may want to backup that file or edit that file manually to add the `typematrix` layout. You will need root priviledges to run this command, if you don't have root priviledges I believe `xkbcomp` will work (a pull request documenting this would be appreciated)
 
 ```
 ./install_layout
