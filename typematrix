@@ -104,16 +104,16 @@ xkb_symbols "basic" {
 
     key.type = "EIGHT_LEVEL";
 
-    key <AC01> { [            a,           A,          Left,           Left, Left, Left, Left, Left ] } ;
+    key <AC01> { [            a,           A,          Home,           Home, Home, Home, Home, Home ] } ;
     key <AC03> { [            d,           D,          Down,           Down, End, End, End, End ] } ;
     key <AC04> { [            f,           F,          Right,          Right, Up, Up, Up, Up ] } ;
-    key <AC02> { [            s,           S,          Up,             Up, Down, Down, Down, Down ] } ;
+    key <AC02> { [            s,           S,          Left,           Left, Down, Down, Down, Down ] } ;
 
     key <AD02> { [            w,           W,          Home,           Home, Home, Home, Home, Home ] } ;
     key <AC05> { [            g,           G,          End,            End, End, End, End, End ] } ;
 
-    key <AD04> { [            r,           R,          Up,           Up, Up, Up, Up ] } ;
-    key <AD05> { [            t,           T,          Right,           Right, Right, Right, Right, Right ] } ;
+    key <AD04> { [            r,           R,          Left,           Left, Left, Left, Left ] } ;
+    key <AD05> { [            t,           T,          Right,          Right, Right, Right, Right, Right ] } ;
 
     key <AC07> { [            j,           J,          KP_4,           KP_4, KP_4, KP_4, KP_4, KP_4 ] } ;
     key <AD08> { [            i,           I,          KP_8,           KP_8, KP_6, KP_6, KP_6, KP_6 ] } ;

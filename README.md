@@ -14,7 +14,7 @@ If on a qwerty keyboard, when left win/command is held left hand becomes arrow k
 
 If on a colemak keyboard, when alt (either left or right) is held left hand becomes arrow keys and right hand becomes mouse
 
-Described in terms of a qwerty layout, `asdf` are the arrow keys, `wg` are home/end, `jil,uom.` are the mouse direction buttons, `k` is left click, `h` is middle click, `;` is right click
+Described in terms of a qwerty layout, `sdfe` are the arrow keys, `ag` are home/end, `jil,uom.` are the mouse direction buttons, `k` is left click, `h` is middle click, `;` is right click
 
 To hit alt, use right control or right win/command instead
 
