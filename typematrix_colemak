@@ -76,12 +76,12 @@ xkb_symbols "basic" {
     //    below.
     include "us"
 
-    key <LALT> { [ ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Shift ] };
+    key <LALT> { [ ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Shift ] };
     key <LWIN> { [ ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Shift ] };
     key <RCTL> { [ Alt_L, Alt_L, Alt_L, Alt_L ] };
     key <RWIN> { [ Alt_L, Alt_L, Alt_L, Alt_L ] };
 
-    key <RALT> { [ ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Shift ] };
+    key <RALT> { [ ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Shift ] };
 
     // makes the caps lock be backspace
     key <CAPS> { [ BackSpace, BackSpace, BackSpace, BackSpace ] };
