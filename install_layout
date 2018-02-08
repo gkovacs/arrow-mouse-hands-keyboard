@@ -1,6 +1,6 @@
 #!/bin/bash
 
 sudo cp ./typematrix /usr/share/X11/xkb/symbols/typematrix
-sudo cp ./typematrix /usr/share/X11/xkb/symbols/typematrix_colemak
+sudo cp ./typematrix_colemak /usr/share/X11/xkb/symbols/typematrix_colemak
 sudo cp ./evdev.xml /usr/share/X11/xkb/rules/evdev.xml
 setxkbmap -layout typematrix
