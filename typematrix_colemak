@@ -78,6 +78,9 @@ xkb_symbols "basic" {
 
     key <LALT> { [ ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Shift ] };
     key <LWIN> { [ ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Shift ] };
+    key <MUHE> { [ ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Shift ] };
+    key <HENK> { [ ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Shift ] };
+    key <MENU> { [ ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Shift ] };
     key <RCTL> { [ Alt_L, Alt_L, Alt_L, Alt_L ] };
     key <RWIN> { [ Alt_L, Alt_L, Alt_L, Alt_L ] };
 
@@ -103,6 +106,11 @@ xkb_symbols "basic" {
     include "level5(modifier_mapping)"
 
     key.type = "EIGHT_LEVEL";
+
+    key <AB11> { [            backslash,           backslash,          backslash,           backslash, backslash, backslash, backslash, backslash ] } ;
+
+    key <KATA> { [            Up,           Up,          Up,           Up, Up, Up, Up, Up ] } ;
+    key <KPEN> { [            Down,           Down,          Down,           Down, Down, Down, Down, Down ] } ;
 
     key <AC01> { [            a,           A,          Home,           Home, Home, Home, Home, Home ] } ;
     key <AC03> { [            d,           D,          Down,           Down, End, End, End, End ] } ;

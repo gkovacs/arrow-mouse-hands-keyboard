@@ -59,7 +59,7 @@ xkb_symbols "basic" {
     // You have three options to actually start one-handed typing:
     //
     // 1. Use this basic layout and map your own preferred key (or
-    //    pedal, of course) to ISO_Level3_Shift.
+    //    pedal, of course) to ISO_Level5_Shift.
     //
     // 2. Use the halfqwerty(caps) variant and start one-handed typing
     //    right away, similar to Randall Munroes 'mirrorboard':
@@ -76,12 +76,15 @@ xkb_symbols "basic" {
     //    below.
     include "us"
 
-    key <LALT> { [ ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Shift ] };
-    key <LWIN> { [ ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Shift ] };
+    key <LALT> { [ ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Shift ] };
+    key <LWIN> { [ ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Shift ] };
+    key <MUHE> { [ ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Shift ] };
+    key <HENK> { [ ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Shift ] };
+    key <MENU> { [ ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Shift ] };
     key <RCTL> { [ Alt_L, Alt_L, Alt_L, Alt_L ] };
     key <RWIN> { [ Alt_L, Alt_L, Alt_L, Alt_L ] };
 
-    key <RALT> { [ ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Shift ] };
+    key <RALT> { [ ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Shift ] };
 
     // makes the caps lock be backspace
     key <CAPS> { [ BackSpace, BackSpace, BackSpace, BackSpace ] };
@@ -91,7 +94,7 @@ xkb_symbols "basic" {
 
 	//key <LWIN> {
 	//  type[Group1]="ONE_LEVEL",
-	//  symbols[Group1] = [ ISO_Level3_Shift ]
+	//  symbols[Group1] = [ ISO_Level5_Shift ]
 	//};
 
 	//key <LALT> {
@@ -104,10 +107,17 @@ xkb_symbols "basic" {
 
     key.type = "EIGHT_LEVEL";
 
+    key <AB11> { [            backslash,           backslash,          backslash,           backslash, backslash, backslash, backslash, backslash ] } ;
+
+    key <HENK> { [            Left,           Left,          Left,           Left, Left, Left, Left, Left ] } ;
+    key <MUHE> { [            Right,           Right,          Right,           Right, Right, Right, Right, Right ] } ;
+    key <KATA> { [            Up,           Up,          Up,           Up, Up, Up, Up, Up ] } ;
+    key <KPEN> { [            Down,           Down,          Down,           Down, Down, Down, Down, Down ] } ;
+
     key <AC01> { [            a,           A,          Home,           Home, Home, Home, Home, Home ] } ;
-    key <AC03> { [            d,           D,          Down,           Down, End, End, End, End ] } ;
-    key <AC04> { [            f,           F,          Right,          Right, Up, Up, Up, Up ] } ;
-    key <AC02> { [            s,           S,          Left,           Left, Down, Down, Down, Down ] } ;
+    key <AC03> { [            d,           D,          Down,           Down, Down, Down, Down, Down ] } ;
+    key <AC04> { [            f,           F,          Right,          Right, Right, Right, Right, Right ] } ;
+    key <AC02> { [            s,           S,          Left,           Left, Left, Left, Left, Left ] } ;
 
     key <AD02> { [            w,           W,          Home,           Home, Home, Home, Home, Home ] } ;
     key <AC05> { [            g,           G,          End,            End, End, End, End, End ] } ;
@@ -116,11 +126,11 @@ xkb_symbols "basic" {
     key <AD05> { [            t,           T,          Right,          Right, Right, Right, Right, Right ] } ;
 
     key <AC07> { [            j,           J,          KP_4,           KP_4, KP_4, KP_4, KP_4, KP_4 ] } ;
-    key <AD08> { [            i,           I,          KP_8,           KP_8, KP_6, KP_6, KP_6, KP_6 ] } ;
+    key <AD08> { [            i,           I,          KP_8,           KP_8, KP_8, KP_8, KP_8, KP_8 ] } ;
 
     key <AB06> { [            n,           N,          KP_4,           KP_4, KP_4, KP_4, KP_4, KP_4 ] } ;
 
-    key <AD07> { [            u,           U,          KP_7,           KP_7, KP_8, KP_8, KP_8, KP_8 ] } ;
+    key <AD07> { [            u,           U,          KP_7,           KP_7, KP_7, KP_7, KP_7, KP_7 ] } ;
 
     key <AB08> { [        comma,        less,          KP_2,           KP_2, KP_2, KP_2, KP_2, KP_2 ] } ;
 
@@ -128,15 +138,15 @@ xkb_symbols "basic" {
 
     key <AB09> { [       period,     greater,          KP_3,           KP_3, KP_3, KP_3, KP_3, KP_3 ] } ;
 
-    key <AC09> { [            l,           L,          KP_6,           KP_6, KP_7, KP_7, KP_7, KP_7 ] } ;
+    key <AC09> { [            l,           L,          KP_6,           KP_6, KP_6, KP_6, KP_6, KP_6 ] } ;
 
     key <AD06> { [            y,           Y,          KP_9,           KP_9, KP_9, KP_9, KP_9, KP_9 ] } ;
 
     key <AC08> { [            k,           K,          Pointer_Button1,           Pointer_Button1, Pointer_Button1, Pointer_Button1, Pointer_Button1, Pointer_Button1 ] } ;
 
-    key <AD03> { [            e,           E,          Up,           Up,          Pointer_Button1, Pointer_Button1, Pointer_Button1, Pointer_Button1 ] } ;
+    key <AD03> { [            e,           E,          Up,           Up,          Up, Up, Up, Up ] } ;
  
-    key <AD09> { [            o,           O,          KP_9,           KP_9,      Pointer_Button3, Pointer_Button3, Pointer_Button3, Pointer_Button3 ] } ;
+    key <AD09> { [            o,           O,          KP_9,           KP_9,      KP_9, KP_9, KP_9, KP_9 ] } ;
 
     key <AC10> { [    semicolon,       colon,          Pointer_Button3,           Pointer_Button3, Pointer_Button3, Pointer_Button3, Pointer_Button3, Pointer_Button3 ] } ;
 
