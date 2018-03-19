@@ -160,15 +160,15 @@ xkb_symbols "basic" {
 
     key <AB10> { [            slash,           question,          z,           Z, slash, question, slash, question ] } ;
 
-    key <AB01> { [            z,           Z,          slash,           question, z, Z, z, Z ] } ;
+    key <AB01> { [            z,           Z,          slash,           question, asciitilde, asciitilde, asciitilde, asciitilde ] } ;
 
-    key <AB02> { [            x,           X,          period,          greater, x, X, x, X ] } ;
+    key <AB02> { [            x,           X,          period,          greater, plus, plus, plus, plus ] } ;
 
-    key <AB03> { [            c,           C,          comma,          less, c, C, c, C ] } ;
+    key <AB03> { [            c,           C,          comma,          less, underscore, underscore, underscore, underscore ] } ;
 
-    key <AB04> { [            v,           V,          m,          M, v, V, v, V ] } ;
+    key <AB04> { [            v,           V,          m,          M, equal, equal, equal, equal ] } ;
 
-    key <AB05> { [            b,           B,          n,          N, b, B, b, B ] } ;
+    key <AB05> { [            b,           B,          n,          N, minus, minus, minus, minus ] } ;
 
     // key <LALT> { [ Super_L, Super_L, Super_L, Super_L, Super_L, Super_L, Super_L, Super_L ] };
 
