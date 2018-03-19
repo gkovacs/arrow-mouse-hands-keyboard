@@ -1420,6 +1420,16 @@
     </layout>
     <layout>
       <configItem>
+        <name>mac_halfqwerty</name>
+        <shortDescription>en</shortDescription>
+        <description>English (US, mac halfqwerty)</description>
+        <languageList>
+          <iso639Id>eng</iso639Id>
+        </languageList>
+      </configItem>
+    </layout>
+    <layout>
+      <configItem>
         <name>us</name>
         
         <shortDescription>en</shortDescription>
