@@ -1410,6 +1410,16 @@
     </layout>
     <layout>
       <configItem>
+        <name>typematrix_halfqwerty</name>
+        <shortDescription>en</shortDescription>
+        <description>English (US, typematrix halfqwerty)</description>
+        <languageList>
+          <iso639Id>eng</iso639Id>
+        </languageList>
+      </configItem>
+    </layout>
+    <layout>
+      <configItem>
         <name>us</name>
         
         <shortDescription>en</shortDescription>

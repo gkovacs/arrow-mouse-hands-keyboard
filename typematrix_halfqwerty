@@ -1,0 +1,177 @@
+default partial alphanumeric_keys modifier_keys
+xkb_symbols "basic" {
+
+    name[Group1] = "English (US, typematrix)" ;
+
+    // This default halfqwerty layout can be used as a base for your
+    // one-hand typing needs. It defines a mirrored qwerty layout on
+    // the third shift level for almost all keys.
+    //
+    // Due to the limited available space on just half of a keyboard,
+    // the following keys have no mirrored mapping:
+    //
+    // - leftbracket, rightbracket, backslash
+    // - arrow keys (who needs those?)
+    // - home, end, page up/down
+    // - delete
+    //
+    // In order to make the halfqwerty layout available to the X
+    // Keyboard Extension, copy halfqwerty.xkb to the symbols folder
+    // of XKB, usually done like this:
+    //
+    //    $ sudo cp halfqwerty.xkb /usr/share/X11/xkb/symbols/halfqwerty
+    //    (note: drop the .xkb file extension)
+    //
+    // You can now try the layout with 'setxkbmap -layout halfqwerty'.
+    //
+    // In order to make the halfqwerty layout available to the
+    // keyboard configuration of your desktop environment, modify the
+    // XKB rules of your system:
+    //
+    //    - open /usr/share/X11/xkb/rules/evdev.xml in your favourite text editor
+    //    - find the <layoutList> element
+    //    - add the halfqwerty layout:
+    //
+    //         <layout>
+    //           <configItem>
+    //             <name>halfqwerty</name>
+    //             <description>English (US, halfqwerty)</description>
+    //             <languageList>
+    //               <iso639Id>eng</iso639Id>
+    //             </languageList>
+    //           </configItem>
+    //           <variantList>
+    //             <variant>
+    //               <configItem>
+    //                 <name>caps</name>
+    //                 <description>English (US, halfqwerty using caps modifier)</description>
+    //               </configItem>
+    //             </variant>
+    //             <variant>
+    //               <configItem>
+    //                 <name>space</name>
+    //                 <description>English (US, halfqwerty assuming space modifier)</description>
+    //               </configItem>
+    //             </variant>
+    //           </variantList>
+    //         </layout>
+    //
+    // You have three options to actually start one-handed typing:
+    //
+    // 1. Use this basic layout and map your own preferred key (or
+    //    pedal, of course) to ISO_Level5_Shift.
+    //
+    // 2. Use the halfqwerty(caps) variant and start one-handed typing
+    //    right away, similar to Randall Munroes 'mirrorboard':
+    //
+    //    See https://blog.xkcd.com/2007/08/14/mirrorboard-a-one-handed-keyboard-layout-for-the-lazy/
+    //
+    //    Note that our halfqwerty layout differs slightly from the
+    //    one explained in the XKCD blog post. See inline
+    //    documentation below.
+    //
+    // 3. Use the halfqwerty(space) variant which allows using the
+    //    space bar to switch to the mirrored layout. This variant
+    //    requires additional configuration, see inline documentation
+    //    below.
+    include "us"
+
+    key <LALT> { [ ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Shift ] };
+    key <LWIN> { [ ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Shift ] };
+    key <MUHE> { [ ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Shift ] };
+    key <HENK> { [ ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Shift ] };
+    key <MENU> { [ ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Shift ] };
+    key <RCTL> { [ Alt_L, Alt_L, Alt_L, Alt_L ] };
+    key <RWIN> { [ Alt_L, Alt_L, Alt_L, Alt_L ] };
+
+    key <RALT> { [ ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Shift ] };
+
+    // makes the caps lock be backspace
+    key <CAPS> { [ BackSpace, BackSpace, BackSpace, BackSpace ] };
+
+    // makes the delete (above backspace on typematrix, fn+backspace on macs) be compose, unless shift is held
+    key <DELE> { [ Multi_key, Delete, Multi_key, Multi_key ] };
+
+	//key <LWIN> {
+	//  type[Group1]="ONE_LEVEL",
+	//  symbols[Group1] = [ ISO_Level5_Shift ]
+	//};
+
+	//key <LALT> {
+	//  type[Group1]="ONE_LEVEL",
+	//  symbols[Group1] = [ ISO_Level5_Shift ]
+	//};
+
+    include "level3(modifier_mapping)"
+    include "level5(modifier_mapping)"
+
+    key.type = "EIGHT_LEVEL";
+
+    key <AB11> { [            backslash,           backslash,          backslash,           backslash, backslash, backslash, backslash, backslash ] } ;
+
+    key <HENK> { [            Left,           Left,          Left,           Left, Left, Left, Left, Left ] } ;
+    key <MUHE> { [            Right,           Right,          Right,           Right, Right, Right, Right, Right ] } ;
+    key <KATA> { [            Up,           Up,          Up,           Up, Up, Up, Up, Up ] } ;
+    key <KPEN> { [            Down,           Down,          Down,           Down, Down, Down, Down, Down ] } ;
+
+    key <AC01> { [            a,           A,          semicolon,           colon, Home, Home, Home, Home ] } ;
+    key <AC03> { [            d,           D,          k,           K, Down, Down, Down, Down ] } ;
+    key <AC04> { [            f,           F,          j,          J, Right, Right, Right, Right ] } ;
+    key <AC02> { [            s,           S,          l,           L, Left, Left, Left, Left ] } ;
+
+    key <AD02> { [            w,           W,          o,           O, Home, Home, Home, Home ] } ;
+    key <AC05> { [            g,           G,          h,            H, End, End, End, End ] } ;
+
+    key <AD04> { [            r,           R,          u,           U, Left, Left, Left ] } ;
+    key <AD05> { [            t,           T,          y,          Y, Right, Right, Right, Right ] } ;
+
+    key <AC07> { [            j,           J,          f,           F, KP_4, KP_4, KP_4, KP_4 ] } ;
+    key <AD08> { [            i,           I,          e,           E, KP_8, KP_8, KP_8, KP_8 ] } ;
+
+    key <AB06> { [            n,           N,          b,           B, KP_4, KP_4, KP_4, KP_4 ] } ;
+
+    key <AD07> { [            u,           U,          r,           R, KP_7, KP_7, KP_7, KP_7 ] } ;
+
+    key <AB08> { [        comma,        less,          c,           C, KP_2, KP_2, KP_2, KP_2 ] } ;
+
+    key <AB07> { [            m,           M,          v,           V, KP_1, KP_1, KP_1, KP_1 ] } ;
+
+    key <AB09> { [       period,     greater,          x,           X, KP_3, KP_3, KP_3, KP_3 ] } ;
+
+    key <AC09> { [            l,           L,          s,           L, KP_6, KP_6, KP_6, KP_6 ] } ;
+
+    key <AD06> { [            y,           Y,          t,           T, KP_9, KP_9, KP_9, KP_9 ] } ;
+
+    key <AC08> { [            k,           K,          d,           D, Pointer_Button1, Pointer_Button1, Pointer_Button1, Pointer_Button1 ] } ;
+
+    key <AD03> { [            e,           E,          i,           I,          Up, Up, Up, Up ] } ;
+ 
+    key <AD09> { [            o,           O,          w,           W,      KP_9, KP_9, KP_9, KP_9 ] } ;
+
+    key <AC10> { [    semicolon,       colon,          a,           A, Pointer_Button3, Pointer_Button3, Pointer_Button3, Pointer_Button3 ] } ;
+
+    key <AC06> { [            h,           H,          g,           G, Pointer_Button2, Pointer_Button2, Pointer_Button2, Pointer_Button2 ] } ;
+
+    key <AD01> { [            q,           Q,          p,           P, q, Q, q, Q ] } ;
+
+    key <AD10> { [            p,           P,          q,           Q, p, P, p, P ] } ;
+
+    key <AD10> { [            p,           P,          q,           Q, p, P, p, P ] } ;
+
+    key <AB10> { [            slash,           question,          z,           Z, slash, question, slash, question ] } ;
+
+    key <AB01> { [            z,           Z,          slash,           question, z, Z, z, Z ] } ;
+
+    key <AB02> { [            x,           X,          period,          greater, x, X, x, X ] } ;
+
+    key <AB03> { [            c,           C,          comma,          less, c, C, c, C ] } ;
+
+    key <AB04> { [            v,           V,          m,          M, v, V, v, V ] } ;
+
+    key <AB05> { [            b,           B,          n,          N, b, B, b, B ] } ;
+
+    // key <LALT> { [ Super_L, Super_L, Super_L, Super_L, Super_L, Super_L, Super_L, Super_L ] };
+
+    // key <LWIN> { [ Hyper_L, Hyper_L, Hyper_L, Hyper_L, Hyper_L, Hyper_L, Hyper_L, Hyper_L ] };
+
+};
