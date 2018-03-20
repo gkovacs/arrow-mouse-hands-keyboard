@@ -170,6 +170,8 @@ xkb_symbols "basic" {
 
     key <AB05> { [            b,           B,          n,          N, minus, minus, minus, minus ] } ;
 
+    key <TAB>  { [          Tab,         Tab,  Return,   Return, Tab, Tab, Tab, Tab ] } ;
+
     // key <LALT> { [ Super_L, Super_L, Super_L, Super_L, Super_L, Super_L, Super_L, Super_L ] };
 
     // key <LWIN> { [ Hyper_L, Hyper_L, Hyper_L, Hyper_L, Hyper_L, Hyper_L, Hyper_L, Hyper_L ] };
