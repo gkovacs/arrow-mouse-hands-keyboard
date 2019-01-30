@@ -109,6 +109,8 @@ xkb_symbols "basic" {
 
     key <AB11> { [            backslash,           backslash,          backslash,           backslash, backslash, backslash, backslash, backslash ] } ;
 
+    key <SPCE> { [            space,           space,          F35,           F35, F35, F35, F35, F35 ] } ;
+
     key <HENK> { [            Left,           Left,          Left,           Left, Left, Left, Left, Left ] } ;
     key <MUHE> { [            Right,           Right,          Right,           Right, Right, Right, Right, Right ] } ;
     key <KATA> { [            Up,           Up,          Up,           Up, Up, Up, Up, Up ] } ;
