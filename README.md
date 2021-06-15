@@ -32,6 +32,28 @@ Note this will overwrite `/usr/share/X11/xkb/rules/evdev.xml` so you may want to
 ./install_layout
 ```
 
+If you would like to have this be the system default, edit `/usr/share/console-setup/KeyboardNames.pl` and add the following under the variants section:
+
+```
+    'English (Typematrix)' => 'typematrix',
+```
+
+Now edit `/usr/share/doc/keyboard-configuration/xorg.lst` and add the following to the layout section:
+
+```
+  typematrix      English (Typematrix)
+```
+
+Now run the command `sudo dpkg-reconfigure xkb-data`
+
+Then you can edit `/etc/default/keyboard` and add the line:
+
+```
+XKBLAYOUT="typematrix"
+```
+
+You can also set the keyboard layout in GNOME as well. Note that this doesn't appear amoung the selections via `sudo dpkg-reconfigure keyboard-configuration`
+
 ## Using
 
 ```
