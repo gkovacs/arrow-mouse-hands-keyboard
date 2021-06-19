@@ -190,7 +190,7 @@ xkb_symbols "basic" {
 
     key <AE10>  { [         0, parenright,   parenright,       parenright, parenright, parenright, parenright, parenright ] };
 
-    key <AE11>  { [     minus, underscore,    underscore, underscore, underscore, underscore, underscore, underscore ] };
+    // key <AE11>  { [     minus, underscore,    underscore, underscore, underscore, underscore, underscore, underscore ] };
 
     key <AE12>  { [     equal,       plus, plus,  plus, plus, plus, plus, plus ] };
 
